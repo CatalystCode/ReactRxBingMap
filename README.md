@@ -1,2 +1,2 @@
 # ReactRxBingMap
-A ReactJS component for the RxJS version of the Bing Maps Ajax Web Control
+A ReactJS component for [RxBingMap](https://github.com/erikschlegel/RxBingMap), an RxJS version of the Bing Maps Ajax Web Control.
