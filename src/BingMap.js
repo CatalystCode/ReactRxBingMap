@@ -1,15 +1,25 @@
 import {
   default as React,
   PropTypes,
-  Component,
-  findDOMNode,
+  Component
 } from "react";
+
+import {default as ReactDOM, findDOMNode} from "react-dom";
 
 import {
   default as ReactRxBingMapContainer
 } from "./ReactRxBingMapContainer";
 
-export default class ReactRxBingMap extends Component {
+export default class BingMap extends Component {
+  static propTypes = {
+    BingTheme: PropTypes.bool,
+    CenterMap: PropTypes.bool,
+    ShowTraffic: PropTypes.bool,
+    credentials: PropTypes.string.isRequired
+  };
+
+  state = {
+  }
 
   componentDidMount () {
     const domElement = findDOMNode(this);
@@ -23,22 +33,20 @@ export default class ReactRxBingMap extends Component {
     this.setState({ map });
   }
 
+  clearMap(){
+    this.state.map.clearEntities();
+  }
+
   render () {
-    const {containerTagName, containerProps, children, ...mapProps} = this.props;
+    let containerTagName = "div";
+    const {domProps, children, ...mapProps} = this.props;
     const child = this.state.map ? (
-      // Notice: implementation details
-      //
-      // In this state, the DOM of google.maps.Map is already initialized in
-      // my innerHTML. Adding extra React components will not clean it
-      // in current (0.13.3) version. It will use prepend to add DOM of
-      // GoogleMapHolder and become a sibling of the DOM of google.maps.Map
-      // Not sure this is subject to change
-      //
+
       <ReactRxBingMapContainer map={this.state.map} {...mapProps}>
         {children}
       </ReactRxBingMapContainer>
     ) : undefined;
 
-    return React.createElement(containerTagName, containerProps, child);
+    return React.createElement(containerTagName, domProps, child);
   }
 }

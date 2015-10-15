@@ -16,7 +16,7 @@ export default class ReactRxBingMapContainer extends Component {
 
     render () {
       return (
-        <div>
+        <div className={this.props.className || ''}>
           {Children.map(this.props.children, (childElement) => {
             if (React.isValidElement(childElement)) {
               return React.cloneElement(childElement, {

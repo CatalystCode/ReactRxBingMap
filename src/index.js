@@ -1,1 +1,1 @@
-export {default as ReactRxBingMap} from "./ReactRxBingMap";
+export {default as BingMap} from "./BingMap";

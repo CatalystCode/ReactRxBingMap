@@ -1,0 +1,20 @@
+{
+  "name": "react-rx-bing-map",
+  "version": "1.0.0",
+  "authors": [
+    "Erik Schlegel <erisch@microsoft.com>"
+  ],
+  "description": "A ReactJS component for the RxJS version of the Bing Maps Ajax Web Control",
+  "license": "MIT",
+  "directory": "vendor",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "remarkable-bootstrap-notify": "*"
+  }
+}
