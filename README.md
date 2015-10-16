@@ -9,7 +9,17 @@ At the core, this framework currently offers two available react components: `1.
 ```
 npm install --save react-rx-bing-map
 ```
+##### For your HTML page
+```html
+     <!--The dom element your map will be binded to -->
+   	 <div id='mapDiv' style="position:absolute; width:100%; height:100%;"></div>
+      
+      <!--This include is required-->
+      <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
 
+      !--Your stuff-->
+      <script type="text/javascript" src="../dist/bingMapsExample.js"></script>
+```      
 ##### For your React Component
 ```js
 import {BingMap, BingPushpin} from "react-rx-bing-map";
@@ -63,5 +73,5 @@ export default class GettingStarted extends Component {
 ```
 
 ##### BingMap Usage
-If CenterMap is enabled, the map will default your intitial view to your current location. MapReferenceId is the dom id reference for which div element the component should be rendered to. You can have as many as you need. enableHighDpi increases the resolution quality of the map rendering, but can hinder performance. You'll need a [bing application key](https://msdn.microsoft.com/en-us/library/ff428642.aspx), which is ridicolously easy to obtain and won't take you more than a minute. You can set an intial default view by including the `initialMapViews` property and provide a list of [ViewOptions](https://msdn.microsoft.com/en-us/library/gg427628.aspx).
+If CenterMap is enabled, the map will default your intitial view to your current location. MapReferenceId is the dom id reference for which div element the component should be rendered to. You can have as many as you need. enableHighDpi increases the resolution quality of the map rendering, but can hinder performance. You'll need a [bing application key](https://msdn.microsoft.com/en-us/library/ff428642.aspx), which is ridicolously easy to obtain and won't take you more than a minute. You can set an initial default view by including the `initialMapViews` property and provide a list of [ViewOptions](https://msdn.microsoft.com/en-us/library/gg427628.aspx).
 All other options supported by this control can be found on the [Bing API docs](https://msdn.microsoft.com/en-us/library/gg427603.aspx)
