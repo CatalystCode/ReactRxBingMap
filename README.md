@@ -76,4 +76,8 @@ If `CenterMap` is enabled, the map will default your intitial view to your curre
 All other options supported by this control can be found on the [Bing API docs](https://msdn.microsoft.com/en-us/library/gg427603.aspx)
 
 ##### Pushpin Usage
-Adding a pushpin to a map is as easy as adding a `BingPushpin` child element to a `BingMap`. The `location` property indicates the geo location of the pin. You can cutomize the asset location of the `icon` used for the pin. A really useful feature with this library is the Bing Location Service feature by using `locationServiceCB`. RxBingMap will retrieve the location details for your pushpin automatically and invoke your callback asynchronously 
+Adding a pushpin to a map is as easy as adding a `BingPushpin` child element to a `BingMap`. The `location` property indicates the geo location of the pin. You can cutomize the asset location of the `icon` used for the pin. A really useful feature with this library is the Bing Location Service feature by using `locationServiceCB`. RxBingMap will retrieve the location details for your pushpin automatically and invoke your async callback via Rx and provide you with access to the response from Bing. Your callback returns a string that will be used for the pin tooltip. 
+All other supported options can be found on the API docs for [PushpinOptions](https://msdn.microsoft.com/en-us/library/gg427629.aspx)
+
+## License
+Copyright (C) 2015 Microsoft, licensed MIT.
