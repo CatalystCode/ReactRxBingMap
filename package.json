@@ -1,7 +1,7 @@
 {
   "name": "react-rx-bing-map",
   "description": "A ReactJS component for the RxJS version of the Bing Maps Ajax Web Control",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "./dist/index.js",
   "repository": {
@@ -52,6 +52,7 @@
   "scripts": {
     "test": "grunt build",
     "server-start": "node server.js",
+    "prepublish": "grunt build",
     "build": "grunt build",
     "build-examples": "grunt build && grunt browserify:example"
   }
