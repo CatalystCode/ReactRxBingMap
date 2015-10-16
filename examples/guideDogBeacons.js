@@ -3,6 +3,7 @@ import {default as BingMap} from "../src/BingMap";
 import {default as BingPushpin} from "../src/BingPushpin";
 import {default as ReactDOM} from "react-dom";
 import Rx from 'rx';
+import Config from '../config.json'
 
 const BeaconServiceEndpoint = 'http://guidedogservices-beacons.azurewebsites.net/api/beacongroups';
 
@@ -100,8 +101,8 @@ export default class BeaconViewer extends Component {
                initialMapViews={defaultView}
                ShowTraffic={false}
                ref="map"
-               ServiceAPIKey="Aji7ARlyYm81OWlGyWxr8DCdPFhUtbYyAYq1LcAKgFoYh1Q6Dx5Sqvybk8qVTtir"
-               credentials="AhbduxsPGweqi8L2tFcVTOM8o7yfT74gWSQw1mC8yTUyDVdePCF7cWJVFXq1wgl5">
+               ServiceAPIKey={Config.BingServiceKey}
+               credentials={Config.BingMapsApiKey} >
                 {this.state.markers.map((marker, index) => {
                   return (
                     <BingPushpin {...marker} />
