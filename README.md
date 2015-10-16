@@ -36,10 +36,8 @@ export default class GettingStarted extends Component {
                   },
                   draggable: false,
                   locationServiceCB: (location) => "<b><u>Location</u></b>: {2}<br>Coordinates {0},{1}".format(location.point.coordinates[0], location.point.coordinates[1], location.name),
-                  textOffset: new Microsoft.Maps.Point(0, 0),
                   icon: 'beacon.png',
                   width: 25, height: 39,
-                  anchor:new Microsoft.Maps.Point(0,0),
                   key: Date.now()
     }]};
   }
