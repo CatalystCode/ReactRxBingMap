@@ -3,7 +3,7 @@ A ReactJS component that allows you to leverage the rich features of Bing Servic
 <img src="https://cloud.githubusercontent.com/assets/7635865/10552923/2d743ddc-7425-11e5-94a7-c652ce026214.gif" />
 
 ### Usage
-At the core, this framework currently offers two available react components: `1. map` `2. pushpin`. This framework is a wrapper extension into [RxBingMaps](https://github.com/erikschlegel/RxBingMap). We're currently working on adding components for notifications, polylines, movement transition(although this is supported in the RxBing library), directions, transit updates and many more. 
+At the core, this framework currently offers two available react components: `1. map` `2. pushpin`. This framework is a wrapper extension into [RxBingMaps](https://github.com/erikschlegel/RxBingMap). We're diligently working towards adding more  components to support notifications, polylines, movement transition(although this is supported in the RxBing library), directions, transit updates and many more. 
 
 ##### Installation
 ```
@@ -61,7 +61,6 @@ export default class GettingStarted extends Component {
                enableHighDpi={false}
                initialMapViews={defaultView}
                ShowTraffic={false}
-               ref="map"
                credentials={YOUR_BING_MAP_API_KEY} >
                 {this.state.markers.map((marker, index) => {
                   return (
@@ -73,5 +72,8 @@ export default class GettingStarted extends Component {
 ```
 
 ##### BingMap Usage
-If CenterMap is enabled, the map will default your intitial view to your current location. MapReferenceId is the dom id reference for which div element the component should be rendered to. You can have as many as you need. enableHighDpi increases the resolution quality of the map rendering, but can hinder performance. You'll need a [bing application key](https://msdn.microsoft.com/en-us/library/ff428642.aspx), which is ridicolously easy to obtain and won't take you more than a minute. You can set an initial default view by including the `initialMapViews` property and provide a list of [ViewOptions](https://msdn.microsoft.com/en-us/library/gg427628.aspx).
+If `CenterMap` is enabled, the map will default your intitial view to your current location. `MapReferenceId` is the dom id reference that React will use for rendering. You can have as many as you need. `enableHighDpi` increases the resolution quality of the map rendering, but can hinder performance. You'll need a [bing application key](https://msdn.microsoft.com/en-us/library/ff428642.aspx), which is ridicolously easy to obtain and won't take you more than a minute. You can set an initial default view by including the `initialMapViews` property and provide a list of [ViewOptions](https://msdn.microsoft.com/en-us/library/gg427628.aspx).
 All other options supported by this control can be found on the [Bing API docs](https://msdn.microsoft.com/en-us/library/gg427603.aspx)
+
+##### Pushpin Usage
+Adding a pushpin to a map is as easy as adding a `BingPushpin` child element to a `BingMap`. The `location` property indicates the geo location of the pin. You can cutomize the asset location of the `icon` used for the pin. A really useful feature with this library is the Bing Location Service feature by using `locationServiceCB`. RxBingMap will retrieve the location details for your pushpin automatically and invoke your callback asynchronously 
