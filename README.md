@@ -35,12 +35,21 @@ export default class GettingStarted extends Component {
   }
   
   render () {
+  let defaultView = [{
+       center: {
+         latitude: this.state.markers[0].location.latitude,
+         longitude: this.state.markers[0].location.longitude
+       },
+       zoom: 15,
+       animate: true
+    }];
+    
     return (
       <BingMap MapReferenceId="mapDiv"
                BingTheme={true}
                CenterMap= {false}
                enableHighDpi={false}
-               initialMapViews={[{center: {latitude: 25.0112183, longitude: 121.520675}, zoom: 18, animate: true}]}
+               initialMapViews={defaultView}
                ShowTraffic={false}
                ref="map"
                credentials={YOUR_BING_MAP_API_KEY} >
@@ -55,4 +64,4 @@ export default class GettingStarted extends Component {
 
 ##### BingMap Usage
 If CenterMap is enabled, the map will default your intitial view to your current location. MapReferenceId is the dom id reference for which div element the component should be rendered to. You can have as many as you need. enableHighDpi increases the resolution quality of the map rendering, but can hinder performance. You'll need a [bing application key](https://msdn.microsoft.com/en-us/library/ff428642.aspx), which is ridicolously easy to obtain and won't take you more than a minute. You can set an intial default view by including the `initialMapViews` property and provide a list of [ViewOptions](https://msdn.microsoft.com/en-us/library/gg427628.aspx).
-
+All other options supported by this control can be found on the [Bing API docs](https://msdn.microsoft.com/en-us/library/gg427603.aspx)
