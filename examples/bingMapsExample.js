@@ -1,7 +1,6 @@
 import {default as React, Component} from "react";
 import {default as BingMap} from "../src/BingMap";
 import {default as BingPushpin} from "../src/BingPushpin";
-import {default as ReactDOM} from "react-dom";
 import Config from '../config.json'
 
 String.prototype.format = function(){
@@ -62,4 +61,4 @@ export default class GettingStarted extends Component {
   }
 }
 
-ReactDOM.render(<GettingStarted />, document.getElementById("mapDiv"));
+React.render(<GettingStarted />, document.getElementById("mapDiv"));

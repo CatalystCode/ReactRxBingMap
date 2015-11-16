@@ -1,7 +1,5 @@
 import {default as React, Component} from "react";
 import {BingMap, BingPushpin} from "../src/index";
-
-import {default as ReactDOM} from "react-dom";
 import Rx from 'rx';
 import Config from '../config.json'
 
@@ -113,4 +111,4 @@ export default class BeaconViewer extends Component {
   }
 }
 
-ReactDOM.render(<BeaconViewer />, document.getElementById("mapDiv"));
+React.render(<BeaconViewer />, document.getElementById("mapDiv"));

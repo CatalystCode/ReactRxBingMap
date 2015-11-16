@@ -1,7 +1,7 @@
 {
   "name": "react-rx-bing-map",
   "description": "A ReactJS component for the RxJS version of the Bing Maps Ajax Web Control",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "./dist/index.js",
   "repository": {
@@ -30,13 +30,11 @@
     "grunt-mocha-test": "*",
     "grunt-watchify": "^0.1.0",
     "jscs": "^2.1.0",
-    "react-dom": "^0.14.0",
-    "react": "^0.14.0",
+    "react": "^0.13.3",
     "rx-bing-map": "*"
   },
   "peerDependencies": {
-    "react-dom": "^0.14.0",
-    "react": "^0.14.0",
+    "react": "^0.13.3",
     "rx-bing-map": "*"
   },
   "dependencies": {

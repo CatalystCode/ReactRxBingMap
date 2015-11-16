@@ -4,8 +4,6 @@ import {
   Component
 } from "react";
 
-import {default as ReactDOM, findDOMNode} from "react-dom";
-
 import {
   default as ReactRxBingMapContainer
 } from "./ReactRxBingMapContainer";
@@ -22,7 +20,7 @@ export default class BingMap extends Component {
   }
 
   componentDidMount () {
-    const domElement = findDOMNode(this);
+    const domElement = React.findDOMNode(this);
     const {children, ...mapProps} = this.props;
     // TODO: support asynchronous load of bing.maps API at this level.
     //
