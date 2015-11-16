@@ -13,8 +13,8 @@ module.exports = function (grunt) {
                 }
             },
             example: {
-                src: './examples/bingMapsExample.js',
-                dest: './dist/bingMapsExample.js',
+                src: './examples/BeaconExample.js',
+                dest: './dist/BeaconExample.js',
                 options: {
                     debug: true,
                     extensions: ['.js'],

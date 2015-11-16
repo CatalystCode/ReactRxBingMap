@@ -24,20 +24,26 @@
     "esprima-fb": "^15001.1001.0-dev-harmony-fb",
     "grunt-browserify": "^4.0.0",
     "grunt-cli": "^0.1.13",
+    "express": "^4.13.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jscs": "^2.1.0",
     "grunt-mocha-test": "*",
     "grunt-watchify": "^0.1.0",
-    "jscs": "^2.1.0"
+    "jscs": "^2.1.0",
+    "react-dom": "^0.14.0",
+    "react": "^0.14.0",
+    "rx-bing-map": "*"
+  },
+  "peerDependencies": {
+    "react-dom": "^0.14.0",
+    "react": "^0.14.0",
+    "rx-bing-map": "*"
   },
   "dependencies": {
     "envify": "^3.2.0",
-    "express": "^4.13.3",
     "extend": "^3.0.0",
-    "react": ">=0.14.0",
-    "react-dom": "^0.14.0",
     "rx": "*",
-    "rx-bing-map": "*"
+    "rx-dom": "*"
   },
   "browserify": {
     "transform": [
