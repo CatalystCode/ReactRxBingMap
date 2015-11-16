@@ -3,7 +3,7 @@ import {BingMap, BingPushpin} from "../src/index";
 import Rx from 'rx';
 import Config from '../config.json'
 
-const BeaconServiceEndpoint = 'http://guidedogservices-beacons.azurewebsites.net/api/beacongroups';
+const BeaconServiceEndpoint = Config.BEACON_SERVICE;
 
 export default class BeaconViewer extends Component {
   constructor(props) {

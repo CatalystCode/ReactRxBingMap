@@ -4,7 +4,7 @@ var configFile = './config.json';
 var configuration = {
   load: function () {
       var defaultConfig = {};
-	    var properties = ['BingMapsApiKey', 'BingServiceKey'];
+	    var properties = ['BingMapsApiKey', 'BingServiceKey', 'BEACON_SERVICE'];
 		  var logStr = '';
 
 			properties.forEach(function (item) {
